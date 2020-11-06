@@ -1,12 +1,313 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Техномарт</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
 
-  </body>
+<body class="page-body">
+  <header class="top-header">
+    <div class="background-header">
+      <div class="wrapper-links container">
+        <a class="logo-technomart-main">
+          <img src="../1481739-technomart-29/img/logo-technomart-main.svg" alt="Логотип магазина Техномарт" width="108"
+            height="18">
+        </a>
+        <form class="form-search">
+          <label class="searching" for="search"></label>
+          <input type="text" id="search" value="Поиск:">
+        </form>
+        <div class="header-links">
+          <a class="bookmark" href="">Закладки: 0</a>
+          <a class="basket" href>Корзина: 0</a>
+          <a class="order" href="">Оформить заказ</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="user-information">
+        <h1>Интернет-магазин строительных материалов<br> и инструментов для ремонта</h1>
+        <div class="contacts">
+          <a class="phone" href="tel:+74956660166">+7 (812) 555-05-55</a>
+          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <a class="login-link" href="">Войти</a>
+        <a class="login-reg" href="">Регистрация</a>
+      </div>
+      <ul class="main-nav-list">
+        <li>Главная</li>
+        <li>Компания</li>
+        <li>Каталог</li>
+        <li>Новости</li>
+        <li>Спецпредложения</li>
+        <li>Доставка</li>
+        <li>Контакты</li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="menu">
+        <ul class="stuff">
+          <li class="materials">
+            <h3>Материалы</h3>
+            <p class="text">На любой вкус</p>
+          </li>
+          <li class="instrument">
+            <h3>Инструмент</h3>
+            <p class="text">На все случаи</p>
+          </li>
+          <li class="technics">
+            <h3>Техника</h3>
+            <p class="text">Для стройки</p>
+          </li>
+        </ul>
+        <div class="slider">
+          <p class="perforator">Перфораторы</p>
+          <p class="instruments">Настоящие мужские игрушки</p>
+          <a href="" class="open-catalog">Открыть каталог</a>
+        </div>
+        <div class="discount">
+          <h3>Скидки 50%</h3>
+          <p class="text">На 350 товаров</p>
+        </div>
+        <div class="delivery">
+          <h3>Доставка</h3>
+          <p class="text">Бесплатно</p>
+        </div>
+      </section>
+      <section>
+        <div class="popular">
+          <h2 class="popular-header">Популярные товары:</h2>
+          <a href="" class="section-link button-goods">Все популярные товары</a>
+        </div>
+        <ul class="hits">
+          <li class="hits-item">
+            <img src="../1481739-technomart-29/img/9000.png" width="184" height="164" alt="Пeрфоратор Bosch BFG 9000">
+            <h3 class="hits-item-9000">Перфоратор Bosch BFG 9000</h3>
+            <p class="old-price">32500 Р.</p>
+            <p class="new-price">25500 Р.</p>
+          </li>
+          <li class="hits-item">
+            <img src="../1481739-technomart-29/img/3000.png" width="127" height="112" alt="Пeрфоратор Bosch BFG 3000">
+            <h3 class="hits-item-3000">Перфоратор Bosch BFG 3000</h3>
+            <p class="old-price">22500 Р.</p>
+            <p class="new-price">15500 Р.</p>
+          </li>
+          <li class="hits-item">
+            <img src="../1481739-technomart-29/img/6000.png" width="144" height="128" alt="Пeрфоратор Bosch BFG 6000">
+            <h3 class="hits-item-6000">Перфоратор Bosch BFG 6000</h3>
+            <p class="old-price">30500 Р.</p>
+            <p class="new-price">25500 Р.</p>
+          </li>
+          <li class="hits-item">
+            <img src="../1481739-technomart-29/img/2000.png" width="127" height="112" alt="Пeрфоратор Bosch BFG 2000">
+            <h3 class="hits-item-2000">Перфоратор Bosch BFG 2000</h3>
+            <p class="old-price">22500 Р.</p>
+            <p class="new-price">12500 Р.</p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <div class="popular">
+          <h2 class="popular-header">Популярные производители</h2>
+          <a href="" class="section-link button-producer">Все производители</a>
+        </div>
+        <ul class="producer">
+          <li class="brand">
+            <a href="#">
+              <img src="../1481739-technomart-29/img/bosch.png" width="220" height="145" alt="Лого производителя Bosch">
+            </a>
+          </li>
+          <li class="brand">
+            <a href="#">
+              <img src="../1481739-technomart-29/img/takita.png" width="220" height="145"
+                alt="Лого производителя Takita">
+            </a>
+          </li>
+          <li class="brand">
+            <a href="#">
+              <img src="../1481739-technomart-29/img/dewalt.png" width="220" height="145"
+                alt="Лого производителя Dewalt">
+            </a>
+          </li>
+          <li class="brand">
+            <a href="#">
+              <img src="../1481739-technomart-29/img/interskol.png" width="220" height="145"
+                alt="Лого производителя Интерскол">
+            </a>
+          </li>
+          <li class="brand">
+            <a href="#">
+              <img src="../1481739-technomart-29/img/hitachi.png" width="220" height="145"
+                alt="Лого производителя Hitachi">
+            </a>
+          </li>
+          <li class="brand">
+            <a href="#">
+              <img src="../1481739-technomart-29/img/lg.png" width="220" height="145" alt="Лого производителя LG">
+            </a>
+          </li>
+          <li class="brand">
+            <a href="#">
+              <img src="../1481739-technomart-29/img/aeg.png" width="220" height="145" alt="Лого производителя AEG">
+            </a>
+          </li>
+          <li class="brand">
+            <a href="#">
+              <img src="../1481739-technomart-29/img/metabo.png" width="220" height="145"
+                alt="Лого производителя Metabo">
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <section class="service">
+      <div class="container">
+        <h2 class="services-header">Сервисы</h2>
+        <p class="text-description">Хороший интернет-магазин отличается от плохого не только ценами!</p>
+        <p class="text-description">Мы стараемся изо всех сил, чтобы сделать вашипокупки приятными.</p>
+        <div class="service-wrapper">
+          <ul class="extra-service">
+            <li>
+              <button class="service-button service-button-delivery" type="button">Доставка</button>
+            </li>
+            <li>
+              <button class="service-button service-button-guaranty" type="button">Гарантия</button>
+            </li>
+            <li>
+              <button class="service-button service-button-credit" type="button">Кредит</button>
+            </li>
+          </ul>
+          <div class="service-option">
+            <h2 class="delivery-header">Доставка</h2>
+            <p class="text-description"> Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно
+              бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="info container">
+      <section class="info-company">
+        <h2 class="company-header">Компания «Техномарт»</h2>
+        <p class="text-description"> Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
+          строительства не оставит
+          равнодушными любителей сэкономить на гастарбайтерах.</p>
+        <p class="text-description"> Мы можем доставить ваш товар в самые отдаленные точки России! <br>Техномарт
+          работает
+          со многими транспортными
+          компаниями:</p>
+        <ul class="delivery-company">
+          <li class="delivery-company-item">Деловые линии</li>
+          <li class="delivery-company-item">Автотрейдинг</li>
+          <li class="delivery-company-item">ЖелДорЭкспедиция</li>
+        </ul>
+        <a href="" class="section-link button-company">Подробнее о компании</a>
+      </section>
+      <section class="info-contacts">
+        <h2 class="contacts-header">Контакты</h2>
+        <p class="text-description">Вы можете забрать товар сами, заехав в наш в офис:</p>
+        <figure class="map-tehnomart">
+          <a href>
+            <img src="../1481739-technomart-29/img/map-tehnomart.jpg" width="300" height="158"
+              alt="Карта с адресом компании Техномрт">
+          </a>
+        </figure>
+        <a href="" class="section-link button-contacts">Заблудились? Напишите нам!</a>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-backgroung-nav">
+      <section class="footer-nav container">
+        <div class="footer-wrapper">
+          <a class="logo-footer">
+            <img src="../1481739-technomart-29/img/logo-tehnomart-footer.svg" width="220" height="68"
+              alt="Логотип магазина Техномарт">
+          </a>
+          <div class="footer-contacts">
+            <p class="footer-address">г.Санкт-петербург, ул.Б.Конюшенная, д.19/8</p>
+            <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </div>
+        </div>
+        <nav class="footer-nav-general">
+          <ul class="footer-nav-list">
+            <li><a class="footer-nav-list-item" href="#">Компания</a></li>
+            <li><a class="footer-nav-list-item" href="#">Новости</a></li>
+            <li><a class="footer-nav-list-item" href="#">Каталог</a></li>
+            <li><a class="footer-nav-list-item" href="#">Доставка</a></li>
+            <li><a class="footer-nav-list-item" href="#">Контакты</a></li>
+          </ul>
+          <ul class="footer-nav-catalog">
+            <li><a class="footer-nav-catalog-item"href="#">Материалы</a></li>
+            <li><a class="footer-nav-catalog-item" href="#">Техника</a></li>
+            <li><a class="footer-nav-catalog-item" href="#">Инструмент</a></li>
+            <li><a class="footer-nav-catalog-item" href="#">Спецпредложения</a></li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+    <div class="footer-backgroung-social">
+      <div class="footer-social-wrapper container">
+        <div class="copyright-wrapper">
+        <p class="copyright-tehnomarkt">© 2010–2019 Компания «Техномарт»</p> 
+        <p class="copyright-tehnomarkt">Все права защищены</p>
+      </div>
+        <section class="footer-social">
+          <ul class="footer-networks">
+            <li>
+              <a class="social-button social-button_vk" href="#" aria-label="Логотип Вконтакте">
+                <svg width="34" height="23" viewBox="0 0 34 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d)">
+                  <path d="M19.5403 11.7281C20.4609 11.4384 21.6396 13.6406 22.8943 14.4834C23.8361 15.1219 24.5573 14.9841 24.5573 14.9841L27.9017 14.9372C27.9017 14.9372 29.6495 14.8322 28.8233 13.4803C28.7549 13.3678 28.3389 12.4781 26.334 10.6472C24.2376 8.73186 24.5217 9.04218 27.0456 5.73093C28.5835 3.71249 29.1988 2.47968 29.0062 1.95468C28.8213 1.44936 27.6918 1.58061 27.6918 1.58061L23.9237 1.60593C23.5568 1.60686 23.2458 1.71749 23.1042 2.08874C23.1013 2.09249 22.5062 3.65061 21.7127 4.9753C20.0362 7.77749 19.367 7.92655 19.0896 7.75124C18.4531 7.3453 18.6139 6.1228 18.6139 5.25374C18.6139 2.5378 19.0299 1.4053 17.7993 1.1128C17.3881 1.0153 17.0876 0.951552 16.039 0.942177C14.6985 0.922489 13.5603 0.942177 12.9151 1.25061C12.4866 1.45968 12.1582 1.91811 12.3576 1.94436C12.6079 1.97718 13.1693 2.09436 13.4698 2.49374C13.8559 3.01124 13.8444 4.17093 13.8444 4.17093C13.8444 4.17093 14.0649 7.36874 13.3244 7.7653C12.8159 8.03718 12.1207 7.48218 10.6252 4.9378C9.86156 3.63655 9.28474 2.19843 9.28474 2.19843C9.28474 2.19843 9.17304 1.93124 8.97082 1.78499C8.73008 1.61155 8.39304 1.55624 8.39304 1.55624L4.81659 1.57874C4.81659 1.57874 4.27926 1.59374 4.08185 1.82436C3.90659 2.02874 4.06741 2.45061 4.06741 2.45061C4.06741 2.45061 6.86867 8.90155 10.0407 12.1509C12.9488 15.1341 16.2537 14.9362 16.2537 14.9362H17.7511C17.7511 14.9362 18.2027 14.8856 18.4339 14.6437C18.6496 14.4187 18.6399 13.9959 18.6399 13.9959C18.6399 13.9959 18.6101 12.0187 19.5403 11.7281Z" fill="white"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d" x="3.05176e-05" y="0.936768" width="33.0451" height="22.0598" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                  <feOffset dy="4"/>
+                  <feGaussianBlur stdDeviation="2"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                  </filter>
+                  </defs>
+                  </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social-button social-button_facebook" href="#" aria-label="Логотип Facebook">
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+                  </svg>                  
+              </a>
+            </li>
+            <li>
+              <a class="social-button social-button_instagram" href="#" aria-label="Логотип Instagram">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z" fill="white"/>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <div class="footer-mail">
+          <p class="feedback">Обратная связь</p>
+          <a class="mail-address" href="">mail@htmlacademy.ru</a>
+        </div>
+        <div class="copyright-academy">
+          <p class="copyright-by">Разработано &mdash;</p>
+          <a class="copyright-academy-link">htmlacademy.ru</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
