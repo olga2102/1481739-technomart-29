@@ -3,10 +3,18 @@
     --basic-black: #000000;
     --header-blue: #293449;
     --basic-red:  #EE3643;
+    --hover-red: #CA2C37;
+    --active-red: #BA2732;
     --link-green: #63A63E;
+    --hover-green: #5FBB2D;
     --light-grey: #F3F7F9;
+    --light-reg-grey:#C5C5C5;
+    --hover-grey: rgba(197,197,197,0.3);
+    --active-grey: rgba(169,169,169,0.3);
     --dark-blue: #32425C;
     --shadow-blue:  #293449;
+    --active-blue: #1D2739;
+    --active-dark-blue: #161D29;
     --menu-orange: #FFBF47;
     --menu-blue: #3BBCE3;
     --menu-purple: #DC91D8;
@@ -14,6 +22,7 @@
     --menu-yellow: #FFC047;
     --basic-red: #EE3643;
     --opacity-white: rgba(255,255,255,0.3);
+    --opacity-link-white:  rgba(255,255,255,0.5);
     --light-pink: #F9F5F0;
     --border-grey: #EAEAEA;
     --text-grey: #A9A9A9;
@@ -75,68 +84,62 @@ img {
 
 .wrapper-links {
     display: flex;
+    position: relative;
     align-items: center;
-    
-    color: var(--basic-white);
-    
+    color: var(--basic-white); 
+}
+
+.order-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 220px;
 }
 
 .header-links {
     display: flex;
     align-items: center;
-
 }
 
 .logo-technomart-main {
-    /* position: relative;
-    z-index: 1; */
-    margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
-  height: 49px;
-  background-color: var(--logo-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-  margin-right: 20px;
-}
-
-/* .logo-technomart-main::after {
     position: absolute;
-    content: "";
-    left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 220px;
-    height: 47px;
-    background-color: var(--logo-red);
+    height: 49px;
+    background-color: var(--basic-red);
     box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-    z-index: -1;
-} */
-
-.order {
-    background-color: var(--link-green);
 }
 
-.bookmark, .basket {
-    padding: 0 25px;
-}
-
-.order {
-    padding: 9px 16px 9px 19px;
+.form-search {
+    margin-right: 35px;
 }
 
 .searching {
-    
-    background-image: url(../img/search.svg);
-    background-repeat: no-repeat;
-    background-position-x: 0px;
-    background-position-y: 3px;
-    opacity: 0.5;
-    padding-left: 22px;
+    position: relative;
+    padding-left: 35px;
 }
 
-.searching:hover {
+.searching::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 17px;
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
     background-image: url(../img/search.svg);
     background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.searching:hover::before {
+    opacity: 1;
+}
+
+.searching:hover::before {
+    color: var(--opacity-link-white);
 }
 
 input[type="text"] {
@@ -146,6 +149,72 @@ input[type="text"] {
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white);
+}
+
+.bookmark, .basket {
+    padding: 10px 35px;
+}
+
+.bookmark {
+    position: relative;
+}
+
+.bookmark::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 16px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/bookmark.svg);
+    opacity: 0.3;
+} 
+
+.bookmark:hover::before {
+    opacity: 1;
+}
+
+.bookmark:active {
+    opacity: 0.5;
+    background-color: var(--active-dark-blue);
+}
+
+.basket {
+    position: relative;
+}
+
+.basket::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/basket.svg);
+    opacity: 0.3;
+}
+
+.basket:hover::before {
+    opacity: 1;
+}
+
+.basket:active {
+    opacity: 0.5;
+}
+
+.order {
+    background-color: var(--link-green);
+    padding: 9px 16px 9px 19px;
+}
+
+.order:hover {
+    background-color: var(--hover-green);
+}
+
+.order:active {
+    color: var(--opacity-link-white);
 }
 
 .user-information {
@@ -220,7 +289,17 @@ input[type="text"] {
     left: 0;
     transform: translate(50%, -50%);
     background-image: url(../img/icon-login.svg);
+    background-repeat: no-repeat;
+}
 
+.login-link:hover::before {
+    color: var(--basic-red);
+    background-image: url(../img/login-hover.svg);
+    background-repeat: no-repeat;
+}
+
+.login-link:active {
+    color: var(--light-reg-grey);
 }
 
 .login-reg {
@@ -234,15 +313,41 @@ input[type="text"] {
     align-self: start;
 }
 
+.login-reg:hover {
+    color: var(--basic-red);
+}
+
+.login-reg:active {
+    color: var(--light-reg-grey);
+}
+
 .main-nav-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     color: var(--basic-white);
+    min-height: 60px;
     margin: 0;
+    padding: 0;
     background: var(--dark-blue);
     box-shadow: inset 0px -5px 0px var(--shadow-blue);
-    padding: 16px 53px 20px 53px;
+} 
+
+.nav-link {
+    padding-top: 16px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.nav-link:hover {
+    background-color: var(--shadow-blue);
+}
+
+.nav-link:active {
+    background-color: var(--active-blue);
+    opacity: 0.5;
 }
 
 .menu  {
@@ -315,16 +420,21 @@ input[type="text"] {
     background-image: url(../img/technic.svg);
 }
 
-.materials h3, .instrument h3, .technics h3, .discount h3, .delivery h3{
+.materials h3, 
+.instrument h3, 
+.technics h3, 
+.discount h3, 
+.delivery h3{
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
     color: var(--basic-white);
     padding-top: 20px;
     padding-left: 23px;
+    padding-bottom: 14px;
     margin: 0;
 }
-.materials p, .instrument p, .technics p, .discount p, .delivery p {
+.link-menu {
     display: inline-block;
     text-transform: uppercase;
     font-size: 14px;
@@ -334,24 +444,32 @@ input[type="text"] {
     margin-left: 23px;
 }
 
-.materials p {
+.link-menu-materials {
     padding: 10px 24px 10px 23px;
 }
 
-.instrument p {
-    padding: 10px 26px;
+.link-menu-instrument {
+    padding: 10px 24px;
 }
 
-.technics p {
-    padding: 10px 31px 10px 30px;
+.link-menu-technics {
+    padding: 10px 24px 10px 24px;
 }
 
-.discount p {
+.link-menu-discount {
     padding: 10px 23px 10px 22px;
 }
 
-.delivery p {
+.link-menu-delivery {
     padding: 10px 37px 10px 36px;
+}
+
+.link-menu:hover {
+    background-color: var(--hover-grey);
+}
+
+.link-menu:active {
+    background-color: var(--active-grey);
 }
 
 .slider {
@@ -365,7 +483,7 @@ input[type="text"] {
     background-size: cover;
 }
 
-.perforator {
+.slider-option {
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
@@ -376,7 +494,11 @@ input[type="text"] {
     text-transform: uppercase;
 }
 
-.instruments {
+.slider-perforator-no-show {
+    display: none;
+}
+
+.slider-text {
     color: var(--basic-white);
     margin: 0;
     padding-top: 5px;
@@ -390,6 +512,42 @@ input[type="text"] {
     padding: 11px 46px 9px 46px;
     margin-top: 113px;
     margin-left: 24px;
+}
+
+.open-catalog:hover {
+    background-color: var(--hover-red);
+}
+
+.open-catalog:active {
+    background-color: var(--active-red);
+}
+
+.slider {
+    position: relative;
+}
+
+.slider-back, .slider-forward {
+    position: absolute;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.slider-back {
+    background-image: url(../img/button-back.svg);
+    left: 5%
+}
+
+.slider-forward {
+    background-image: url(../img/button-forward.svg);
+    right: 5%;
 }
 
 .discount {
@@ -544,6 +702,15 @@ input[type="text"] {
     margin-bottom: 20px;
 }
 
+.brand:hover {
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.brand:active {
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+    opacity: 0.5;
+}
+
 .service {
     background-color: var(--background-grey);
     padding: 64px 0 99px 0;
@@ -591,6 +758,11 @@ input[type="text"] {
     font-weight: bold;
     font-size: 21px;
     line-height: 30px;
+}
+
+.service-button:hover {
+    background-color: var(--shadow-blue);
+    color: var(--basic-white);
 }
  
 .service-button-delivery {
