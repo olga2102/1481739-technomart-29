@@ -30,6 +30,8 @@
     --footer-beige: #FFD180;
     --footer-icon-blue: #212A3A;
     --footer-feedback-beige: #FFD180;
+    --form-text-grey: #A9A9A9;
+    --background-button-grey: #F4F4F4;
 }
 
 body {
@@ -729,6 +731,7 @@ input[type="text"] {
     font-size: 13px;
     line-height: 24px;
     margin: 0;
+    padding-bottom: 20px;
 }
 
 .extra-service {
@@ -800,21 +803,72 @@ input[type="text"] {
 }
 
 .service-option {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+}
+
+.service-option-delivery {
     position: relative;
 }
 
-.service-option::after {
+.service-option-delivery::after {
     position: absolute;
     content: "";
     width: 468px;
     height: 261px;
-    right: -25%;
-    transform: translateX(50%);
+    right: -50%;
+    transform: translateX(25%);
     top: 0;
     background-image: url(../img/truck.svg);
 }
 
+.service-option-guaranty {
+    position: relative;
+}
+
+.service-option-guaranty:after {
+    position: absolute;
+    content: "";
+    width: 389px;
+    height: 283px;
+    right: -50%;
+    transform: translateX(25%);
+    top: 0;
+    background-image: url(../img/guaranty.png);
+}
+
+.service-option-credit {
+    position: relative;
+}
+
+.service-option-credit:after {
+    position: absolute;
+    content: "";
+    width: 465px;
+    height: 285px;
+    right: -50%;
+    transform: translateX(25%);
+    top: 0;
+    background-image: url(../img/credit.png);
+}
+
+.button-credit {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+    padding: 12px 45px 12px 44px;
+    margin-top: 20px;
+}
+
+.service-option-not-show {
+    display: none;
+}
+ 
 .info {
+    position: relative;
     display: flex;
     margin-top: 70px;
     margin-bottom: 70px;
@@ -880,6 +934,122 @@ input[type="text"] {
 .button-contacts {
     padding: 11px 61px 9px 62px;
     bottom: 0;
+}
+
+.form {
+    display: none;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 620px;
+    min-height: 385px;
+    background-color: var(--basic-white);
+    border-top: 7px solid var(--basic-red);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    margin: auto;
+}
+
+.modal-show {
+    display: block;
+}
+
+.form-wrapper {
+    max-width: 460px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 39px 80px 0 81px;
+}
+
+.input-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    margin-bottom: 13px;
+}
+
+.data-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.data-wrapper-name {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.data-wrapper-mail {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.form input[type="text"] {
+    min-width: 220px;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--form-text-grey);
+    border: 2px solid var(--light-reg-grey);;
+}
+
+.form-item {
+    margin-bottom: 11px;
+}
+
+.letter {
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--form-text-grey);
+    border: 2px solid var(--light-reg-grey);
+}
+
+.button-form {
+    border: none;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+    color: var(--basic-white);
+    margin: 0 auto;
+    width: 100%;
+    padding: 11px 0 9px 0;
+}
+
+.button-form-background {
+    background-color: var(--background-button-grey);
+    padding: 37px 80px;
+    margin-top: 37px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    width: 21px;
+    height: 21px;
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.modal-close::before, .modal-close::after {
+    content: "";
+    position: absolute;
+    left: -25%;
+    width: 21px;
+    height: 3px;
+    background-color: var(--basic-red);
+}
+
+.modal-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-close::after {
+    transform: rotate(-45deg);
 }
 
 .footer-nav {

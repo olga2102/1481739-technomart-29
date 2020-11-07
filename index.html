@@ -210,10 +210,22 @@
             </li>
           </ul>
           <div class="service-option">
+          <div class="service-option-delivery">
             <h2 class="delivery-header">Доставка</h2>
             <p class="text-description"> Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно
               бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
             </p>
+          </div>
+          <div class="service-option-guaranty service-option-not-show">
+            <h2 class="delivery-header">Гарантия</h2>
+            <p class="text-description"> Если купленный у нас товар поломается или заискрит,<br>а также в случае пожара, спровоцированного его возгоранием,<br>вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как нибудь сами.
+            </p>
+          </div>
+          <div class="service-option-credit service-option-not-show">
+            <h2 class="delivery-header">Кредит</h2>
+            <p class="text-description">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут к вам на поиощь.
+            </p>
+            <a class="button-credit" href="#">Отправить заявку</a>
           </div>
         </div>
       </div>
@@ -246,6 +258,28 @@
         </figure>
         <a href="" class="section-link button-contacts">Заблудились? Напишите нам!</a>
       </section>
+      <form class="form form-no-show">
+        <button class="modal-close" type="button"></button>
+        <div class="form-wrapper">
+        <div class="input-wrapper">
+          <div class="data-wrapper data-wrapper-name">
+        <label class="form-item" for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" value="Имя Фамилия">
+      </div>
+      <div class="data-wrapper data-wrapper-mail">
+        <label class="form-item" for="mail">Ваш e-mail:</label>
+        <input type="text" id="mail" name="mail" value="email@example.com">
+      </div>
+      </div>
+      <div class="data-wrapper">
+        <label class="form-item " for="text">Текст письма:</label>
+        <textarea class="letter" id="text" name="text" rows="5">В свободной форме</textarea>
+      </div>
+    </div>
+        <div class="button-form-background">
+        <button class="button-form" type="submit">Отправить</button>
+      </div>
+      </form>
     </div>
   </main>
   <footer>
@@ -339,6 +373,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/form.js"></script>
 </body>
 
 </html>
